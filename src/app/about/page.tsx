@@ -1,6 +1,7 @@
 import gym from "@/assets/gym.png";
 import { H1 } from "@/components/ui/H1";
 import { H2 } from "@/components/ui/H2";
+import { H3 } from "@/components/ui/H3";
 import { Metadata } from "next";
 import Image from "next/image";
 
@@ -39,6 +40,37 @@ export default function Page() {
       </section>
       <hr className="border-muted" />
       <section className="space-y-3">
+        <H2>Work History</H2>
+        <ul className="list-inside list-disc">
+          <Work
+            company="Comviva"
+            role="Software Development Engineer"
+            year="(Jun 2018 - Jul 2019)"
+          />
+          <Work
+            company="Qikpod"
+            role="Software Development"
+            year="(Jun 2019 - Jan 2020)"
+          />
+          <Work
+            company="Zelp Technologies Private Limited"
+            role="Full Stack Developer"
+            year="(Jan 2020 - Oct 2022)"
+          />
+          <Work
+            company="Metasky (now Quboid)"
+            role="Senior Software Developer"
+            year="(Nov 2022 - Sept 2023)"
+          />
+          <Work
+            company="Accolite"
+            role="Senior Software Developer"
+            year="(Sept 2023 - Present)"
+          />
+        </ul>
+      </section>
+      <hr className="border-muted" />
+      <section className="space-y-3">
         <H2>Side projects</H2>
         <p>
           In my free time, I like to work on side projects to keep my skill
@@ -73,5 +105,16 @@ export default function Page() {
         <Image src={gym} alt="Gym photo" className="rounded-md" />
       </section>
     </section>
+  );
+}
+function Work(props: { company: string; year: string; role: string }) {
+  return (
+    <li className="mt-4 text-lg font-semibold">
+      {props.role} <br />
+      <span className="ml-6 text-sm font-thin">
+        <span className="text-sm font-semibold">{props.company}</span>{" "}
+        {props.year} - Full Time
+      </span>
+    </li>
   );
 }
