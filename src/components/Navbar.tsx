@@ -7,9 +7,9 @@ export default function Navbar() {
     <header className="sticky top-0 bg-background">
       <div className="mx-auto flex max-w-3xl flex-wrap justify-between gap-3 px-3 py-4">
         <nav className="space-x-4 font-medium">
-          <Link href="/">HOME</Link>
-          <Link href="/about">ABOUT ME</Link>
-          <Link href="/social">SOCIAL MEDIA</Link>
+          <Link href="/">Home</Link>
+          <Link href="/about">About me</Link>
+          <Link href="/contact">Contact</Link>
         </nav>
         <div className="flex items-center gap-4">
           <ThemeToggle />

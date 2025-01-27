@@ -26,6 +26,23 @@ export default function Page() {
       </section>
       <hr className="border-muted" />
       <section className="space-y-3">
+        <H2>Basic Details</H2>
+        <p>
+          <span className="font-bold">Date of Birth :</span> 11th December 1996
+        </p>
+        <p>
+          <span className="font-bold">Education :</span> Undergraduate (B.E)
+        </p>
+        <p>
+          <span className="font-bold">College :</span> University Visvesvaraya
+          College of Engineering
+        </p>
+        <p>
+          <span className="font-bold">Year :</span> 2014-2018
+        </p>
+      </section>
+      <hr className="border-muted" />
+      <section className="space-y-3">
         <H2>Skills</H2>
         <p>
           I&apos;m a full-stack web developer specializing in{" "}
@@ -37,6 +54,19 @@ export default function Page() {
           a modern website on almost every device and reach the whole world with
           it.
         </p>
+        <p>
+          I also have experience wrting smart contracts and working on the
+          Blockchain domain. I have worked on applications that deal with
+          Ethereum based blockchains. Smart contracts written by me are
+          currently deployed in production and can be viewed on Opensea.
+        </p>
+        <H3>Technologies / Languages</H3>
+        <p>
+          NodeJS, ReactJS , NextJS 14, Javascript, PostgresDB, MongoDB, Redis ,
+          Python3(I use it only for competetive coding), Solidity
+        </p>
+        <H3>Cloud Technologies</H3>
+        <p>AWS</p>
       </section>
       <hr className="border-muted" />
       <section className="space-y-3">
@@ -88,6 +118,13 @@ export default function Page() {
       </section>
       <hr className="border-muted" />
       <section className="space-y-3">
+        <H2>Honors and Awards</H2>
+        <H3>Cognizant Mastercode 2017</H3>
+        <p>Nov 2017</p>
+        <p>AIR-28 in Cognizant Mastercode 2017 </p>
+      </section>
+      <hr className="border-muted" />
+      <section className="space-y-3">
         <H2>Hobbies</H2>
         <p>
           When I&apos;m not immersed in lines of code, you can find me at the
@@ -107,6 +144,7 @@ export default function Page() {
     </section>
   );
 }
+
 function Work(props: { company: string; year: string; role: string }) {
   return (
     <li className="mt-4 text-lg font-semibold">

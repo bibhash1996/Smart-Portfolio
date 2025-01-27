@@ -1,4 +1,5 @@
 import { H1 } from "@/components/ui/H1";
+import { H3 } from "@/components/ui/H3";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -48,6 +49,13 @@ export default function Page() {
           </li>
         </ul>
         <hr className="border-muted" />
+      </section>
+      <section className="space-y-6">
+        <H1>Contact Me</H1>
+        <section className="space-y-3">
+          <H3>Email : </H3> bibhash1996@gmail.com
+          <H3>Phone : </H3> +91-8971905616
+        </section>
       </section>
     </section>
   );
