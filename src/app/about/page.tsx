@@ -63,7 +63,7 @@ export default function Page() {
         <H3>Technologies / Languages</H3>
         <p>
           NodeJS, ReactJS , NextJS 14, Javascript, PostgresDB, MongoDB, Redis ,
-          Python3(I use it only for competetive coding), Solidity
+          Python3(I use it only for competetive coding), Solidity, ElasticSearch
         </p>
         <H3>Cloud Technologies</H3>
         <p>AWS</p>
