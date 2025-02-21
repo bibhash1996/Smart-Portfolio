@@ -4,6 +4,7 @@ import { H2 } from "@/components/ui/H2";
 import { H3 } from "@/components/ui/H3";
 import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About Me",
@@ -108,11 +109,37 @@ export default function Page() {
         </p>
         <ul className="list-inside list-disc">
           <li>
-            <strong>Omegle Like</strong> - Connect with similar interest people
+            <strong>Proximeet</strong> - Connect with similar interest people
             near you over a video call
           </li>
           <li>
-            <strong>Smart portfolio</strong> - An AI backed smart portfolio
+            <strong>Smart portfolio</strong> -{" "}
+            <Link
+              href={"https://bibhash.xyz"}
+              className="text-blue-500 hover:underline"
+            >
+              https://bibhash.xyz
+            </Link>
+          </li>
+          <li>
+            <strong>NoteCraft</strong> - Your AI-Powered Note-Taking Wizard!
+            📝✨
+            <Link
+              href={"https://notecraft.bibhash.xyz"}
+              className="text-blue-500 hover:underline"
+            >
+              https://notecraft.bibhash.xyz
+            </Link>
+          </li>
+          <li>
+            <strong>Draw And Sign Pro</strong> - A Side project that let&apos;s
+            you draw your sign and download it as pdf{" "}
+            <Link
+              href={"https://draw-and-sign.bibhash.xyz"}
+              className="text-blue-500 hover:underline"
+            >
+              https://notecraft.bibhash.xyz
+            </Link>
           </li>
         </ul>
       </section>
