@@ -138,7 +138,7 @@ export default function Page() {
               href={"https://draw-and-sign.bibhash.xyz"}
               className="text-blue-500 hover:underline"
             >
-              https://notecraft.bibhash.xyz
+              https://draw-and-sign.bibhash.xyz
             </Link>
           </li>
         </ul>
