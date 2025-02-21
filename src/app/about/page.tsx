@@ -109,8 +109,8 @@ export default function Page() {
         </p>
         <ul className="list-inside list-disc">
           <li>
-            <strong>Proximeet</strong> - Connect with similar interest people
-            near you over a video call
+            <strong>Proximeet (Coming Soon ....)</strong> - Connect with similar
+            interest people near you over a video call
           </li>
           <li>
             <strong>Smart portfolio</strong> -{" "}
