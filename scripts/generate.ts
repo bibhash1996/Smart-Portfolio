@@ -9,7 +9,7 @@ import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
 import { getEmbeddingsCollection, getVectorStore } from "../src/lib/astraDB";
 
 async function generateEmbeddings() {
-  await Redis.fromEnv().flushdb();
+  // await Redis.fromEnv().flushdb();
   const vectorStore = await getVectorStore();
 
   //Delete all the existing embeddings stored in the vector dbs

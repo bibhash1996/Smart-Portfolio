@@ -39,9 +39,9 @@ export async function POST(req: Request) {
 
     const currentMessageContent = messages[messages.length - 1].content;
 
-    const cache = new UpstashRedisCache({
-      client: Redis.fromEnv(),
-    });
+    // const cache = new UpstashRedisCache({
+    //   client: Redis.fromEnv(),
+    // });
 
     const { stream, handlers } = LangChainStream();
 
