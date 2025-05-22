@@ -50,14 +50,14 @@ export async function POST(req: Request) {
       streaming: true,
       callbacks: [handlers],
       //   verbose: true,
-      cache,
+      // cache,
       //   maxRetries:6
     });
 
     const rephrasingModel = new ChatOpenAI({
       modelName: "gpt-3.5-turbo",
       //   verbose: true,
-      cache,
+      // cache,
     });
 
     const retriever = (await getVectorStore()).asRetriever();
