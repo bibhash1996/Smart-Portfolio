@@ -17,7 +17,7 @@ export default function Home() {
           <H1 className="text-center sm:text-start">Hi, I&apos;m Bibhash 👋</H1>
           <p className="text-center sm:text-start">
             I&apos;m a full-stack developer from Bangalore (India) who is
-            currently working as Senior Software Engineer.
+            currently working as Lead Software Engineer.
           </p>
         </div>
         <div className="flex justify-center">
