@@ -11,7 +11,12 @@ export const metadata: Metadata = {
   description: "Learn more about Bibhash and his work.",
 };
 
-export default function Page() {
+export default async function Page() {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  const res = await fetch(`${baseUrl}/api/about`, { cache: "no-store" });
+
+  const leetcodeData = await res.json();
+
   return (
     <section className="space-y-6">
       <H1>About Me</H1>
@@ -49,25 +54,59 @@ export default function Page() {
           I&apos;m a full-stack web developer specializing in{" "}
           <strong>MERN stack</strong>.
         </p>
-        <p>
-          I also have experience with App development but have stopped working
-          with it a few years ago. I prefer web development because you can use
-          a modern website on almost every device and reach the whole world with
-          it.
-        </p>
+        I am a result-driven Full-Stack Engineer with expertise in the MERN
+        stack, AWS, PostgreSQL, Redis, and AI-driven applications. Proven track
+        record of architecting scalable systems, optimizing backend performance,
+        and pioneering AI solutions with Retrieval-Augmented Generation (RAG)
+        and agentic workflows. Adept at delivering enterprise-level
+        applications, ensuring high availability, security, and seamless user
+        experiences.
         <p>
           I also have experience wrting smart contracts and working on the
           Blockchain domain. I have worked on applications that deal with
           Ethereum based blockchains. Smart contracts written by me are
           currently deployed in production and can be viewed on Opensea.
         </p>
-        <H3>Technologies / Languages</H3>
+        <H3>Technologies</H3>
         <p>
-          NodeJS, ReactJS , NextJS 14, Javascript, PostgresDB, MongoDB, Redis ,
-          Python3(I use it only for competetive coding), Solidity, ElasticSearch
+          NodeJS, ReactJS, NextJS 14, Javascript, Typescriptm GraphQL,
+          PostgresDB, MongoDB, Redis , Python3, FastAPI, Solidity,
+          ElasticSearch, Langchain, Langraph, Agents, Model Context Protocol,
+          OpenAI, Generative AI, Retrieval Augmented Generation(RAG), Voice
+          Agents
         </p>
         <H3>Cloud Technologies</H3>
         <p>AWS</p>
+        <hr className="border-muted" />
+        <H2>Leetcode stats</H2>
+        {/* <p>{JSON.stringify(leetcodeData)}</p> */}
+        <p>
+          <span className="font-bold">Total Problems Solved :</span>{" "}
+          {leetcodeData?.data?.totalSolved || "nil"}
+        </p>
+        <p>
+          <span className="font-bold">Easy Problems :</span>{" "}
+          {leetcodeData?.data?.easySolved || "nil"}
+        </p>
+        <p>
+          <span className="font-bold">Medium Problems :</span>{" "}
+          {leetcodeData?.data?.mediumSolved || "nil"}
+        </p>
+        <p>
+          <span className="font-bold">Hard Problems :</span>{" "}
+          {leetcodeData?.data?.hardSolved || "nil"}
+        </p>
+        <hr className="border-muted" />
+        <p>
+          <span className="font-bold">Education :</span> Undergraduate (B.E)
+        </p>
+        <p>
+          <span className="font-bold">College :</span> University Visvesvaraya
+          College of Engineering
+        </p>
+        <p>
+          <span className="font-bold">Year :</span> 2014-2018
+        </p>
       </section>
       <hr className="border-muted" />
       <section className="space-y-3">
@@ -95,7 +134,7 @@ export default function Page() {
           />
           <Work
             company="Accolite"
-            role="Senior Software Developer"
+            role="Lead Software Engineer"
             year="(Sept 2023 - Present)"
           />
         </ul>
@@ -139,6 +178,16 @@ export default function Page() {
               className="text-blue-500 hover:underline"
             >
               https://draw-and-sign.bibhash.xyz
+            </Link>
+          </li>
+          <li>
+            <strong>DB Whisperer</strong> - Designed an AI enabled web app agent
+            for natural language to SQL conversion with LangGraph and OpenAI.
+            <Link
+              href={"https://db-whisperer.bibhash.xyz/"}
+              className="text-blue-500 hover:underline"
+            >
+              https://db-whisperer.bibhash.xyz/
             </Link>
           </li>
         </ul>
